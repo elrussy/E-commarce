@@ -9,7 +9,7 @@ export default function Checkout() {
     console.log("hello from payment",values);
     let {data} = await onlinePayment(values)
     console.log(data);
-    window.location.href = data.session.url
+    window.location.href = data?.session?.url
   }
   let formik = useFormik({
     initialValues: {
